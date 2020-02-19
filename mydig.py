@@ -7,7 +7,10 @@
 import dns.query
 import dns.message
 import dns.name
+import dns.exception
 import sys
+import time
+import datetime
 
 global_cname = []  # Keeps track of CNAMEs
 
@@ -28,7 +31,14 @@ def main(argc: int, argv: list):
     domain_name = domain_name + "."
 
     # Calls mydig function starting with chosen root server
+    start = time.clock()
     answer = mydig("198.41.0.4", domain_name, len(domain_list)-1)
+    end = time.clock()
+    if answer is None:
+        return
+
+    query_time = end - start
+    query_time = int(query_time * 1000)
 
     # Prints result
     print("QUESTION SECTION:")
@@ -38,8 +48,8 @@ def main(argc: int, argv: list):
         print(i)
     print(answer)
     print()
-    print("Query time: ")
-    print("WHEN: ")
+    print("Query time: " + str(query_time) + "msec")
+    print("WHEN: " + str(datetime.datetime.now()))
 
     return
 
@@ -50,7 +60,11 @@ def mydig(ip_address: str, domain_name: str, domain_index: int):
     message = dns.message.make_query(domain_name, "A")
 
     # Send the Message as a query and save the response
-    response = dns.query.udp(message, ip_address, timeout=10)
+    try:
+        response = dns.query.udp(message, ip_address, timeout=10)
+    except dns.exception.Timeout:
+        print("Error: query timed out")
+        return None
 
     # First check if Answer RRset has answer A
     answer = response.get_rrset(dns.message.ANSWER, dns.name.from_text(domain_name), dns.rdataclass.IN, dns.rdatatype.A)
