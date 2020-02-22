@@ -27,7 +27,6 @@ def main(argc: int, argv: list):
         domain_name = argv[1]
 
     domain_list = domain_name.split(".")
-    domain_list = [x + "." for x in domain_list]
     domain_name = domain_name + "."
 
     # Calls mydig function starting with chosen root server
@@ -48,7 +47,7 @@ def main(argc: int, argv: list):
         print(i)
     print(answer)
     print()
-    print("Query time: " + str(query_time) + "msec")
+    print("Query time: " + str(query_time) + " msec")
     print("WHEN: " + str(datetime.datetime.now()))
 
     return

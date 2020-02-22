@@ -1,0 +1,112 @@
+SITE 1
+INPUT: mydig.py google.com
+QUESTION SECTION:
+google.com. IN A
+ANSWER SECTION:
+google.com. 300 IN A 172.217.10.110
+
+Query time: 68 msec
+WHEN: 2020-02-22 16:33:14.619164
+
+SITE 2
+INPUT: mydig.py youtube.com
+QUESTION SECTION:
+youtube.com. IN A
+ANSWER SECTION:
+youtube.com. 300 IN A 172.217.6.238
+
+Query time: 64 msec
+WHEN: 2020-02-22 16:33:57.147859
+
+SITE 3
+INPUT: mydig.py tmall.com
+QUESTION SECTION:
+tmall.com. IN A
+ANSWER SECTION:
+tmall.com. 300 IN A 140.205.94.193
+tmall.com. 300 IN A 140.205.130.99
+
+Query time: 124 msec
+WHEN: 2020-02-22 16:35:09.382861
+
+SITE 4
+INPUT: mydig.py baidu.com
+QUESTION SECTION:
+baidu.com. IN A
+ANSWER SECTION:
+baidu.com. 600 IN A 39.156.69.79
+baidu.com. 600 IN A 220.181.38.148
+
+Query time: 288 msec
+WHEN: 2020-02-22 16:36:12.150516
+
+SITE 5
+INPUT: mydig.py qq.com
+QUESTION SECTION:
+qq.com. IN A
+ANSWER SECTION:
+qq.com. 600 IN A 125.39.52.26
+qq.com. 600 IN A 58.250.137.36
+qq.com. 600 IN A 58.247.214.47
+
+Query time: 317 msec
+WHEN: 2020-02-22 16:37:26.461992
+
+SITE 6
+INPUT: mydig.py facebook.com
+QUESTION SECTION:
+facebook.com. IN A
+ANSWER SECTION:
+facebook.com. 300 IN A 31.13.71.36
+
+Query time: 79 msec
+WHEN: 2020-02-22 16:38:36.382343
+
+SITE 7
+INPUT: mydig.py sohu.com
+QUESTION SECTION:
+sohu.com. IN A
+ANSWER SECTION:
+sohu.com. 600 IN A 211.159.191.18
+
+Query time: 284 msec
+WHEN: 2020-02-22 16:40:44.310869
+
+SITE 8
+INPUT: mydig.py login.tmall.com
+QUESTION SECTION:
+login.tmall.com. IN A
+ANSWER SECTION:
+login.tmall.com. 600 IN CNAME login.tmall.com.danuoyi.tbcache.com.
+login.tmall.com.danuoyi.tbcache.com. 60 IN A 47.246.24.234
+login.tmall.com.danuoyi.tbcache.com. 60 IN A 47.246.24.233
+
+Query time: 451 msec
+WHEN: 2020-02-22 16:41:37.206775
+
+SITE 9
+INPUT: mydig.py taobao.com
+QUESTION SECTION:
+taobao.com. IN A
+ANSWER SECTION:
+taobao.com. 300 IN A 140.205.220.96
+taobao.com. 300 IN A 140.205.94.189
+
+Query time: 120 msec
+WHEN: 2020-02-22 16:42:33.923814
+
+SITE 10
+INPUT: mydig.py yahoo.com
+QUESTION SECTION:
+yahoo.com. IN A
+ANSWER SECTION:
+yahoo.com. 1800 IN A 98.137.246.8
+yahoo.com. 1800 IN A 98.137.246.7
+yahoo.com. 1800 IN A 98.138.219.232
+yahoo.com. 1800 IN A 98.138.219.231
+yahoo.com. 1800 IN A 72.30.35.9
+yahoo.com. 1800 IN A 72.30.35.10
+
+Query time: 79 msec
+WHEN: 2020-02-22 16:43:18.861935
+
