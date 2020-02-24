@@ -30,9 +30,9 @@ def main(argc: int, argv: list):
     domain_name = domain_name + "."
 
     # Calls mydig function starting with chosen root server
-    start = time.clock()
+    start = time.perf_counter()
     answer = mydig("198.41.0.4", domain_name, len(domain_list)-1)
-    end = time.clock()
+    end = time.perf_counter()
     if answer is None:
         return
 
